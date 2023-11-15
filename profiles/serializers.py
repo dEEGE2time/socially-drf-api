@@ -6,7 +6,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
 
-    # Confirm if user is owner
+    # Check if the user is the owner
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner

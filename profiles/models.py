@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
+    """
+    Profile model for each user with appropriate fields.
+    Default Image set from Cloudinary.
+    """
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -22,6 +26,10 @@ class Profile(models.Model):
 
 
 def create_profile(sender, instance, created, **kwargs):
+    """
+    create_profile function to check wether user is
+    logged in or not.
+    """
     if created:
         Profile.objects.create(owner=instance)
 
