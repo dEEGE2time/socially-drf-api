@@ -26,7 +26,7 @@ class PostList(generics.ListCreateAPIView):
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     View each post individually
-    Update or delete post if user = owner
+    Update, edit or delete post if user = owner
     """
     serializer_class = PostSerializer
     permission_classes = [IsOwnerOrReadOnly]
