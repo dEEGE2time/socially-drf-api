@@ -5,7 +5,7 @@ New users will see the most recent posts and also popular profiles to follow, th
 
 [Live website](#)
 
-![Responsive Mockup](#)
+![Responsive Mockup](#docs/frontend/images/mockup.png)
 
 ## Features 
 
